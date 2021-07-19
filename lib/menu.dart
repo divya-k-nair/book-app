@@ -1,5 +1,6 @@
 import 'package:book_app/entry.dart';
 import 'package:book_app/search.dart';
+import 'package:book_app/view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -48,6 +49,24 @@ class Menu extends StatelessWidget {
                 ),
 
               ),
+            ),
+            SizedBox(height:20 ,),
+            SizedBox(
+              height: 60,
+              width: double.infinity,
+              child: RaisedButton(
+                color: Colors.purpleAccent,
+                onPressed:(){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>View()));
+
+              },
+                child: Text("VIEW",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                  ),
+              ),
+            ),
             ),
           ],//children
         ),
